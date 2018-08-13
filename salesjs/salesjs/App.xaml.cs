@@ -1,18 +1,17 @@
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-[assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace salesjs
 {
-	public partial class App : Application
+    using salesjs.Views;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    public partial class App : Application
 	{
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
-		}
+            MainPage = new NavigationPage(new ProductsPage());
+
+        }
 
 		protected override void OnStart ()
 		{
